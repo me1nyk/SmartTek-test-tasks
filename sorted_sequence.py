@@ -1,8 +1,9 @@
 import math
+from typing import Union, List
 
 
-def sorted_sequence(sequence: list) -> list:
-    def calculate_area(dimension):
+def sorted_sequence(sequence: List[Union[List[float], float]]) -> list:
+    def calculate_area(dimension: Union[List[float], float]) -> float:
         if isinstance(dimension, list):
             width, length = dimension
             return width * length
